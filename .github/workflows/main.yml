@@ -16,22 +16,7 @@ jobs:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
     - name: Get rates
       run: |
-        curl 'https://bonbast.com/json' \
-          -H 'authority: bonbast.com' \
-          -H 'accept: application/json, text/javascript, */*; q=0.01' \
-          -H 'accept-language: en-US,en;q=0.7' \
-          -H 'content-type: application/x-www-form-urlencoded; charset=UTF-8' \
-          -H 'cookie: st_bb=0; cookieconsent_status=true; converter=TRY|IRR' \
-          -H 'origin: https://bonbast.com' \
-          -H 'referer: https://bonbast.com/' \
-          -H 'sec-fetch-dest: empty' \
-          -H 'sec-fetch-mode: cors' \
-          -H 'sec-fetch-site: same-origin' \
-          -H 'sec-gpc: 1' \
-          -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36' \
-          -H 'x-requested-with: XMLHttpRequest' \
-          --data-raw 'data=f97c6fce8f41eab6841ece9d59cdd4c7%2CmMfAO%2C2022-12-14-11-27-01&webdriver=false' \
-          --compressed -o gayidirial
+        curl https://bonbast-api.deta.dev/latest -o gayidirial
     - name: push changes to remote
       run: |
         git config --global user.name "lilcheti"
