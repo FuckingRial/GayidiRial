@@ -28,6 +28,7 @@ jobs:
         CS: ${{ secrets.CS }}
         AT: ${{ secrets.AT }}
         ATS: ${{ secrets.ATS }}
+        TOKEN: ${{ secrets.TOKEN }}
     - name: push changes to remote
       run: |
         git config --global user.name "lilcheti"
