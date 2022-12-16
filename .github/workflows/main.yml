@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  shoroe gayesh:
+  shoroe-gayesh:
     runs-on: ubuntu-latest
     
     steps:
