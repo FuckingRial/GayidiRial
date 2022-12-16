@@ -1,10 +1,19 @@
-import tweepy,json,os
+import tweepy,json,os,requests
 
 
 consumer_key = os.environ.get("CK")
 consumer_secret = os.environ.get("CS")
 access_token = os.environ.get("AT")
 access_token_secret = os.environ.get("ATS")
+
+def send(bot_message):
+       bot_token = os.environ.get("TOKEN")
+       bot_chatID = os.environ.get("CHATID")
+       send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=@gayidirial&parse_mode=Markdown&disable_web_page_preview=true&text=' + bot_message
+    
+       response = requests.get(send_text)
+    
+       return response.json()
 
 client = tweepy.Client(
     consumer_key=consumer_key, consumer_secret=consumer_secret,
@@ -44,3 +53,5 @@ response = client.create_tweet(
     text= text
 )
 print(f"https://twitter.com/user/status/{response.data['id']}")
+
+print(send(text.replace("\n","%0A")))
