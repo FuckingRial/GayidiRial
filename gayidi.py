@@ -23,9 +23,20 @@ client = tweepy.Client(
 # after setting the Write permission
 
 with open('gayidirial') as f:
-    d = json.load(f)
-    print(d)
+    emruz = json.load(f)
+    print(emruz)
+    
+with open('gayidirialdiruz') as f:
+    diruz = json.load(f)
+    print(diruz)
+    
+with open('btc') as f:
+    btc = json.load(f)
+    print(btc)
+text = "دلار: " + str(emruz["usd"]["sell"]) + "\n بیتکوین: " +str(btc["stats"]["btc-rls"]["dayClose"]) + "\n بیتکوین-دلار: " + str(btc["global"]["binance"]["btc"])
+if emruz["usd"]["sell"] > diruz["usd"]["sell"]:
+    text = text + "\n امروز" +str(int(100*(emruz["usd"]["sell"] - diruz["usd"]["sell"])/ diruz["usd"]["sell"])) + " درصد فقیر تر شدیم "
 response = client.create_tweet(
-    text="دلار: " + str(d["usd"]["sell"])
+    text= text
 )
 print(f"https://twitter.com/user/status/{response.data['id']}")
