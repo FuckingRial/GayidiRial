@@ -1,0 +1,31 @@
+
+name: rates only
+
+on:
+  schedule:
+    - cron: '* * * * *'
+  workflow_dispatch:
+
+jobs:
+  shoroe-gayesh:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: Get rates
+      run: |
+        curl "https://bonbast-api.deta.dev/latest" -o gayidirial
+        curl "https://bonbast-api.deta.dev/archive" -o gayidirialdiruz
+        curl "https://api.nobitex.ir/market/stats?srcCurrency=btc&dstCurrency=rls" -o btc
+    - name: push changes to remote
+      run: |
+        git config --global user.name "lilcheti"
+        git config --global user.email "farbod@tokhmi.xyz"
+        git pull
+        git add -A
+        if [ -z "$(git status --porcelain)" ]; then 
+          echo "No changes"
+        else 
+          git commit -m "updated the data"
+          git push
+        fi
