@@ -36,7 +36,7 @@ with open('btc') as f:
     print(btc)
 text = "دلار: " + str(emruz["usd"]["sell"]) + "\n بیتکوین: " +str(btc["stats"]["btc-rls"]["dayClose"]) + "\n بیتکوین-دلار: " + str(btc["global"]["binance"]["btc"])
 if emruz["usd"]["sell"] > diruz["usd"]["sell"]:
-    text = text + "\n امروز" +str(int(100*(emruz["usd"]["sell"] - diruz["usd"]["sell"])/ diruz["usd"]["sell"])) + " درصد فقیر تر شدیم "
+    text = text + "\n امروز" +str(round(100*(emruz["usd"]["sell"] - diruz["usd"]["sell"])/ diruz["usd"]["sell"]),2) + " درصد فقیر تر شدیم "
 response = client.create_tweet(
     text= text
 )
