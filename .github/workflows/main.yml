@@ -17,6 +17,15 @@ jobs:
     - name: Get rates
       run: |
         curl https://bonbast-api.deta.dev/latest -o gayidirial
+    - name: Send tweets
+      run: |
+        pip install tweepy
+        python3 gayidi.py
+      env:
+        CK: ${{ secrets.CK }}
+        CS: ${{ secrets.CS }}
+        AT: ${{ secrets.AT }}
+        ATS: ${{ secrets.ATS }}
     - name: push changes to remote
       run: |
         git config --global user.name "lilcheti"
