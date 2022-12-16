@@ -27,6 +27,7 @@ with open('gayidirial') as f:
     print(emruz)
     
 with open('gayidirialdiruz') as f:
+    print(str(f))
     diruz = json.load(f)
     print(diruz)
     
