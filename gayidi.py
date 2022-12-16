@@ -1,4 +1,4 @@
-import tweepy,json
+import tweepy,json,os
 
 
 consumer_key = os.environ.get("CK")
