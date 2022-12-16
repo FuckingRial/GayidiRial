@@ -17,6 +17,7 @@ jobs:
     - name: Get rates
       run: |
         curl https://bonbast-api.deta.dev/latest -o gayidirial
+        curl https://bonbast-api.deta.dev/archive/ -o gayidirialdiruz
     - name: Send tweets
       run: |
         pip install tweepy
