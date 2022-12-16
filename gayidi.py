@@ -35,9 +35,11 @@ with open('btc') as f:
     btc = json.load(f)
     print(btc)
 btcrial = int(btc["stats"]["btc-rls"]["dayClose"])
-text = "دلار: " + str(emruz["usd"]["sell"]) + "تومن\n بیتکوین: " +str(f"{btcrial:,}") + "تومن\n بیتکوین-دلار: " + str(btc["global"]["binance"]["btc"])
+dollarrial = int(emruz["usd"]["sell"])
+btcdollar = int(btc["global"]["binance"]["btc"])
+text = "دلار: " + str(f"{dollarrial:,}") + " تومن\n بیتکوین: " +str(f"{btcrial:,}") + " تومن\n بیتکوین: " + str(f"{btcdollar:,}") + " دلار"
 if emruz["usd"]["sell"] > diruz["usd"]["sell"]:
-    text = text + "\n\n امروز" +str(round(100*(emruz["usd"]["sell"] - diruz["usd"]["sell"])/ diruz["usd"]["sell"],2)) + " درصد فقیر تر شدیم "
+    text = text + "\n\n امروز " +str(round(100*(emruz["usd"]["sell"] - diruz["usd"]["sell"])/ diruz["usd"]["sell"],2)) + " درصد فقیر تر شدیم "
 response = client.create_tweet(
     text= text
 )
