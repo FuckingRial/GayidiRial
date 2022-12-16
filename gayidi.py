@@ -34,7 +34,7 @@ with open('gayidirialdiruz') as f:
 with open('btc') as f:
     btc = json.load(f)
     print(btc)
-btcrial = btc["stats"]["btc-rls"]["dayClose"]
+btcrial = int(btc["stats"]["btc-rls"]["dayClose"])
 text = "دلار: " + str(emruz["usd"]["sell"]) + "تومن\n بیتکوین: " +str(f"{btcrial:,}") + "تومن\n بیتکوین-دلار: " + str(btc["global"]["binance"]["btc"])
 if emruz["usd"]["sell"] > diruz["usd"]["sell"]:
     text = text + "\n\n امروز" +str(round(100*(emruz["usd"]["sell"] - diruz["usd"]["sell"])/ diruz["usd"]["sell"],2)) + " درصد فقیر تر شدیم "
