@@ -17,7 +17,7 @@ jobs:
     - name: Get rates
       run: |
         curl "https://bonbast-api.deta.dev/latest" -o gayidirial
-        curl "https://bonbast-api.deta.dev/archive" -o gayidirialdiruz
+        curl https://bonbast-api.deta.dev/archive/ -o gayidirialdiruz
         curl "https://api.nobitex.ir/market/stats?srcCurrency=btc&dstCurrency=rls" -o btc
     - name: Send tweets
       run: |
