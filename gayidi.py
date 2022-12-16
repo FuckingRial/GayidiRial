@@ -26,6 +26,6 @@ with open('gayidirial') as f:
     d = json.load(f)
     print(d)
 response = client.create_tweet(
-    text=d["usd"]["sell"]
+    text="دلار: "str(d["usd"]["sell"])
 )
 print(f"https://twitter.com/user/status/{response.data['id']}")
