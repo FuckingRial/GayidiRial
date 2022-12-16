@@ -1,4 +1,4 @@
-name: Goshname
+name: Gayidane rial
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update:
+  shoroe gayesh:
     runs-on: ubuntu-latest
     
     steps:
