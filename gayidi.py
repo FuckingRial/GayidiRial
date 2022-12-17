@@ -42,7 +42,7 @@ with open('gayidirialdiruz') as f:
 with open('btc') as f:
     btc = json.load(f)
     print(btc)
-btcrial = int(btc["stats"]["btc-rls"]["dayClose"]/10)
+btcrial = int(int(btc["stats"]["btc-rls"]["dayClose"])/10)
 dollarrial = int(emruz["usd"]["sell"])
 btcdollar = int(btc["global"]["binance"]["btc"])
 text = "دلار: " + str(f"{dollarrial:,}") + " تومن\n بیتکوین: " +str(f"{btcrial:,}") + " تومن\n بیتکوین: " + str(f"{btcdollar:,}") + " دلار"
