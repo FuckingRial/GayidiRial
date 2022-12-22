@@ -16,7 +16,7 @@ jobs:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
     - name: Create Plot
       run: |
-        pip install matplotlib
+        pip install matplotlib,requests
         python3 weeklyplot.py
     - name: push changes to remote
       run: |
