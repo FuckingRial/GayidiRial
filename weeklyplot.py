@@ -18,7 +18,7 @@ usd = []
 weekdays = []
 weekdays.append(weekdays_cte[date.today().weekday()])
 usd.append(days[0]["usd"]["sell"])
-for i in range(4):
+for i in range(6):
   dd = days[i+1]["date"].split("-")
   weekdays.append(weekdays_cte[date(int(dd[0]),int(dd[1]),int(dd[2])).weekday()])
   usd.append(days[i+1]["usd"]["sell"])
