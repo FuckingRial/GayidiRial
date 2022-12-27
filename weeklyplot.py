@@ -24,3 +24,15 @@ for i in range(6):
   usd.append(days[i+1]["usd"]["sell"])
 print(weekdays)
 print(usd)
+plt.plot(usd, weekdays)
+  
+# naming the x axis
+plt.xlabel('x - axis')
+# naming the y axis
+plt.ylabel('y - axis')
+  
+# giving a title to my graph
+plt.title('My first graph!')
+  
+# function to show the plot
+plt.savefig('foo.png')
