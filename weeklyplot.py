@@ -27,12 +27,12 @@ print(usd)
 plt.plot(usd, weekdays)
   
 # naming the x axis
-plt.xlabel('x - axis')
+plt.xlabel('قیمت دلار')
 # naming the y axis
-plt.ylabel('y - axis')
+plt.ylabel('روز هفته')
   
 # giving a title to my graph
-plt.title('My first graph!')
+plt.title('پروژه گاییدن ریال')
   
 # function to show the plot
 plt.savefig('foo.png')
