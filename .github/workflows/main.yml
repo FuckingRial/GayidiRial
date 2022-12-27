@@ -19,6 +19,13 @@ jobs:
         curl "https://bonbast-api.deta.dev/latest" -o gayidirial
         curl https://bonbast-api.deta.dev/archive/ -o gayidirialdiruz
         curl "https://api.nobitex.ir/market/stats?srcCurrency=btc&dstCurrency=rls" -o btc
+    - name: Create Plot
+      run: |
+        pip install matplotlib
+        pip install requests
+        pip install arabic-reshaper
+        pip install python-bidi
+        python3 weeklyplot.py
     - name: Send tweets
       run: |
         pip install tweepy
