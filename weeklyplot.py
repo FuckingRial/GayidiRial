@@ -3,7 +3,8 @@ from datetime import datetime as date
 import matplotlib.pyplot as plt
 from bidi.algorithm import get_display
 from arabic_reshaper import reshape
-
+import os
+os.remove("weekplot.png")
 weekdays_cte = ["دوشنبه","سه شنبه","چهارشنبه","پنج شنبه","جمعه","شنبه","یکشنبه"]
 
 today = requests.get("https://bonbast-api.deta.dev/latest").json()
@@ -39,4 +40,4 @@ plt.title(get_display(reshape('پروژه گاییدن ریال')))
 plt.gca().invert_xaxis()
 
 # function to show the plot
-plt.savefig('foo.png')
+plt.savefig('weekplot.png')
