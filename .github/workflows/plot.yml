@@ -18,6 +18,8 @@ jobs:
       run: |
         pip install matplotlib
         pip install requests
+        pip install arabic-reshaper
+        pip install python-bidi
         python3 weeklyplot.py
     - name: push changes to remote
       run: |
