@@ -30,12 +30,12 @@ persian_weekdays = [get_display(reshape(label)) for label in weekdays]
 plt.plot(usd, persian_weekdays)
   
 # naming the x axis
-plt.xlabel(get_display(reshape('قیمت دلار'))
+plt.xlabel(get_display(reshape('قیمت دلار')))
 # naming the y axis
-plt.ylabel(get_display(reshape('روز هفته'))
+plt.ylabel(get_display(reshape('روز هفته')))
   
 # giving a title to my graph
-plt.title(get_display(reshape('پروژه گاییدن ریال'))
+plt.title(get_display(reshape('پروژه گاییدن ریال')))
   
 # function to show the plot
 plt.savefig('foo.png')
