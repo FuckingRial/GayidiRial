@@ -48,9 +48,10 @@ btcdollar = int(btc["global"]["binance"]["btc"])
 text = "دلار: " + str(f"{dollarrial:,}") + " تومن\n بیتکوین: " +str(f"{btcrial:,}") + " تومن\n بیتکوین: " + str(f"{btcdollar:,}") + " دلار"
 if emruz["usd"]["sell"] > diruz["usd"]["sell"]:
     text = text + "\n\n امروز " +str(round(100*(emruz["usd"]["sell"] - diruz["usd"]["sell"])/ diruz["usd"]["sell"],2)) + " درصد فقیر تر شدیم "
-response = client.create_tweet(
-    text= text
-)
-print(f"https://twitter.com/user/status/{response.data['id']}")
 
+auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, access_token_secret)
+api = tweepy.API(auth)
+api.update_status_with_media(text,filename="weekplot.png")
+
+#telegram
 print(send(text.replace("\n","%0A")))
