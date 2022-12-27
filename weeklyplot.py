@@ -36,6 +36,8 @@ plt.xlabel(get_display(reshape('روز هفته')))
   
 # giving a title to my graph
 plt.title(get_display(reshape('پروژه گاییدن ریال')))
-  
+plt.gca().invert_xaxis()
+plt.gca().invert_yaxis()
+
 # function to show the plot
 plt.savefig('foo.png')
