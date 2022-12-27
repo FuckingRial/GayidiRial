@@ -4,7 +4,10 @@ import matplotlib.pyplot as plt
 from bidi.algorithm import get_display
 from arabic_reshaper import reshape
 import os
-os.remove("weekplot.png")
+try:
+  os.remove("weekplot.png")
+except:
+  1
 weekdays_cte = ["دوشنبه","سه شنبه","چهارشنبه","پنج شنبه","جمعه","شنبه","یکشنبه"]
 
 today = requests.get("https://bonbast-api.deta.dev/latest").json()
