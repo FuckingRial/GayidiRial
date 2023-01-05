@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime as date
+from datetime import date, timedelta
 import matplotlib.pyplot as plt
 from bidi.algorithm import get_display
 from arabic_reshaper import reshape
@@ -15,10 +15,10 @@ yesterday = requests.get("https://bonbast-api.deta.dev/archive/").json()
 days = []
 days.append(today)
 days.append(yesterday)
-d = yesterday["date"].split("-")
+d = date.today() - timedelta(days=1)
 for i in range(5):
-  print(str(d[0]+"-"+d[1]+"-"+str(int(d[2])-i-1)))
-  days.append(requests.get("https://bonbast-api.deta.dev/archive?date="+d[0]+"-"+d[1]+"-"+str(int(d[2])-i-1)).json())
+  d = d - timedelta(days=1)
+  days.append(requests.get("https://bonbast-api.deta.dev/archive?date="+d.strftime('%Y-%m-%d'))).json())
 print(days)
   
 usd = []
