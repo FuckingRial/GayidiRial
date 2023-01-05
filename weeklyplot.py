@@ -18,7 +18,7 @@ days.append(yesterday)
 d = date.today() - timedelta(days=1)
 for i in range(5):
   d = d - timedelta(days=1)
-  days.append(requests.get("https://bonbast-api.deta.dev/archive?date="+d.strftime('%Y-%m-%d'))).json())
+  days.append(requests.get("https://bonbast-api.deta.dev/archive?date="+d.strftime('%Y-%m-%d')).json())
 print(days)
   
 usd = []
