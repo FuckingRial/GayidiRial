@@ -17,6 +17,7 @@ days.append(today)
 days.append(yesterday)
 d = yesterday["date"].split("-")
 for i in range(5):
+  print(str(d[0]+"-"+d[1]+"-"+str(int(d[2])-i-1)))
   days.append(requests.get("https://bonbast-api.deta.dev/archive?date="+d[0]+"-"+d[1]+"-"+str(int(d[2])-i-1)).json())
 print(days)
   
