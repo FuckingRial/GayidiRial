@@ -1,7 +1,1 @@
-<html>
-<head><title>500 Internal Server Error</title></head>
-<body>
-<center><h1>500 Internal Server Error</h1></center>
-<hr><center>openresty</center>
-</body>
-</html>
+{"date":"2023-05-30","usd":{"sell":51400,"buy":51300},"eur":{"sell":55100,"buy":55000},"gbp":{"sell":63750,"buy":63550},"chf":{"sell":56800,"buy":56700},"cad":{"sell":37800,"buy":37700},"aud":{"sell":33450,"buy":33350},"sek":{"sell":4725,"buy":4710},"nok":{"sell":4590,"buy":4575},"rub":{"sell":635,"buy":630},"thb":{"sell":1480,"buy":1475},"sgd":{"sell":38050,"buy":37950},"hkd":{"sell":6560,"buy":6530},"azn":{"sell":30150,"buy":30050},"amd":{"sell":1330,"buy":1325},"dkk":{"sell":7400,"buy":7380},"aed":{"sell":14340,"buy":14310},"jpy":{"sell":3675,"buy":3665},"try":{"sell":2520,"buy":2500},"cny":{"sell":7260,"buy":7240},"sar":{"sell":13700,"buy":13600},"inr":{"sell":620,"buy":620},"myr":{"sell":11150,"buy":11050},"afn":{"sell":585,"buy":580},"kwd":{"sell":167200,"buy":166800},"iqd":{"sell":3925,"buy":3915},"bhd":{"sell":136350,"buy":135850},"omr":{"sell":133500,"buy":133200},"qar":{"sell":14100,"buy":14100}}
